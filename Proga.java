@@ -48,7 +48,7 @@ public class Proga extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonADD)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-//                .addComponent(jButtonSAVE)
+                .addComponent(jButtonSAVE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
