@@ -1,7 +1,7 @@
 public class AddGroup extends javax.swing.JFrame {
 
     public AddGroup() {
-    	super("Додавання групи товарів");
+    	super("Р”РѕРґР°РІР°РЅРЅСЏ РіСЂСѓРїРё С‚РѕРІР°СЂС–РІ");
         initComponents();
     }
 
@@ -15,12 +15,12 @@ public class AddGroup extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelADD.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Додати групу товарів", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        jPanelADD.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Р”РѕРґР°С‚Рё РіСЂСѓРїСѓ С‚РѕРІР°СЂС–РІ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
         jLabelName.setFont(new java.awt.Font("Tahoma", 0, 14)); 
-        jLabelName.setText("Назва групи:");
+        jLabelName.setText("РќР°Р·РІР° РіСЂСѓРїРё:");
 
-        jButtonADD.setText("Додати");
+        jButtonADD.setText("Р”РѕРґР°С‚Рё");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanelADD);
         jPanelADD.setLayout(jPanel1Layout);

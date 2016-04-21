@@ -1,8 +1,11 @@
 
+import java.io.File;
+
+
 public class Proga extends javax.swing.JFrame {
 
     public Proga() {
-    	super("База продуктів");
+    	super("Р‘Р°Р·Р° РїСЂРѕРґСѓРєС‚С–РІ");
         initComponents();
     }
 
@@ -20,13 +23,14 @@ public class Proga extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelGroups.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Групи товарів", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); 
-        jPanelGroups.setName("Групи Товарів"); 
+        jPanelGroups.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Р“СЂСѓРїРё С‚РѕРІР°СЂС–РІ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); 
+        jPanelGroups.setName("Р“СЂСѓРїРё РўРѕРІР°СЂС–РІ"); 
 
-        jButtonADD.setText("Додати групу");
+        jButtonADD.setText("Р”РѕРґР°С‚Рё РіСЂСѓРїСѓ");
 
-        jButtonSAVE.setText("Зберегти");
-
+        jButtonSAVE.setText("Р—Р±РµСЂРµРіС‚Рё");
+        //
+        jTreeOfGroups.setModel(new FileSystemModel(new File("D:\\KMA\\2trim1kurs\\Java SE\\Projects")));
         jScrollPane2.setViewportView(jTreeOfGroups);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanelGroups);
@@ -44,15 +48,15 @@ public class Proga extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonADD)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonSAVE)
+//                .addComponent(jButtonSAVE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelProduct.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Товар", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        jPanelProduct.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "РўРѕРІР°СЂ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        jLabelGroup.setText("Група товарів:");
+        jLabelGroup.setText("Р“СЂСѓРїР° С‚РѕРІР°СЂС–РІ:");
 
-        jLabelProduct.setText("Назва товару:");
+        jLabelProduct.setText("РќР°Р·РІР° С‚РѕРІР°СЂСѓ:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanelProduct);
         jPanelProduct.setLayout(jPanel2Layout);
