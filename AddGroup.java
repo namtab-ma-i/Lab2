@@ -1,8 +1,17 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JOptionPane;
+
 public class AddGroup extends javax.swing.JFrame {
 
+	
     public AddGroup() {
-    	super("Р”РѕРґР°РІР°РЅРЅСЏ РіСЂСѓРїРё С‚РѕРІР°СЂС–РІ");
+    	super("Додавання групи товарів");
+
         initComponents();
+        
     }
 
     @SuppressWarnings("unchecked")                      
@@ -13,14 +22,30 @@ public class AddGroup extends javax.swing.JFrame {
         jTextFieldName = new javax.swing.JTextField();
         jButtonADD = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
-        jPanelADD.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Р”РѕРґР°С‚Рё РіСЂСѓРїСѓ С‚РѕРІР°СЂС–РІ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        jPanelADD.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Додати групу товарів", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
         jLabelName.setFont(new java.awt.Font("Tahoma", 0, 14)); 
-        jLabelName.setText("РќР°Р·РІР° РіСЂСѓРїРё:");
+        jLabelName.setText("Назва групи:");
 
-        jButtonADD.setText("Р”РѕРґР°С‚Рё");
+        jButtonADD.setText("Додати");
+        
+        jButtonADD.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				File myPath = new File("D:\\GroupsOfGoods\\" + jTextFieldName.getText());
+				if (!Proga.database.contains(jTextFieldName.getText())){
+				Proga.database.add(jTextFieldName.getText());	
+				myPath.mkdirs();
+				Proga.jTreeOfGroups.updateUI();
+				}else{
+					JOptionPane.showMessageDialog(null, "This name already exists!");
+				}
+			}
+        	
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanelADD);
         jPanelADD.setLayout(jPanel1Layout);
