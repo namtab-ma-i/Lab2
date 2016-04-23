@@ -1,11 +1,18 @@
 
 import java.io.File;
 
+import javax.swing.JOptionPane;
+import javax.swing.JTree;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreeSelectionModel;
+
 
 public class Proga extends javax.swing.JFrame {
 
     public Proga() {
-    	super("Р‘Р°Р·Р° РїСЂРѕРґСѓРєС‚С–РІ");
+    	super("База продуктів");
         initComponents();
     }
 
@@ -23,16 +30,33 @@ public class Proga extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanelGroups.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Р“СЂСѓРїРё С‚РѕРІР°СЂС–РІ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); 
-        jPanelGroups.setName("Р“СЂСѓРїРё РўРѕРІР°СЂС–РІ"); 
+        jPanelGroups.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Групи товарів", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); 
+        jPanelGroups.setName("Групи Товарів"); 
 
-        jButtonADD.setText("Р”РѕРґР°С‚Рё РіСЂСѓРїСѓ");
+        jButtonADD.setText("Додати групу");
 
-        jButtonSAVE.setText("Р—Р±РµСЂРµРіС‚Рё");
+        jButtonSAVE.setText("Зберегти");
         //
-        jTreeOfGroups.setModel(new FileSystemModel(new File("D:\\KMA\\2trim1kurs\\Java SE\\Projects")));
+        jTreeOfGroups.setModel(new FileSystemModel(new File("E:\\Coding\\Mars_Workspace\\LW2\\products")));
         jScrollPane2.setViewportView(jTreeOfGroups);
-
+        jTreeOfGroups.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
+        jTreeOfGroups.addTreeSelectionListener(new TreeSelectionListener() {
+        	@Override
+			public void valueChanged(TreeSelectionEvent e) {
+        		File fileSelected = (File) jTreeOfGroups.getLastSelectedPathComponent();
+        		jLabelGroup.setText("Група товарів: " + fileSelected.getAbsolutePath());
+        		jLabelProduct.setText("Назва товару: " + fileSelected.getName());
+        		// SOME OLD CODE
+        		/*JTree tree = (JTree) e.getSource(); // Getting the tree on click
+				DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent(); // get selected node
+			if(node==null) return; // if node wasn't selected, return void
+			//File selectedFile = (File) node.getUserObject(); // get file from node
+			String selectedNodeName = node.toString(); // get selected node name
+			    if (node.isLeaf()) { // if node is a leaf(not a directory), print its name
+			      System.out.println(selectedNodeName);
+			      //JOptionPane.showMessageDialog(Proga.this,"Filepath", selectedFile.getName(), JOptionPane.INFORMATION_MESSAGE);
+			}*/
+		}});
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanelGroups);
         jPanelGroups.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -52,11 +76,11 @@ public class Proga extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelProduct.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "РўРѕРІР°СЂ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        jPanelProduct.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Товар", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
-        jLabelGroup.setText("Р“СЂСѓРїР° С‚РѕРІР°СЂС–РІ:");
+        jLabelGroup.setText("Група товарів:");
 
-        jLabelProduct.setText("РќР°Р·РІР° С‚РѕРІР°СЂСѓ:");
+        jLabelProduct.setText("Назва товару:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanelProduct);
         jPanelProduct.setLayout(jPanel2Layout);
@@ -139,4 +163,3 @@ public class Proga extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTree jTreeOfGroups;               
 }
-
