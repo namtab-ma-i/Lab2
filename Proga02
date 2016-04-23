@@ -1,0 +1,223 @@
+public class Proga extends javax.swing.JFrame {
+
+    public Proga() {
+        initComponents();
+    }
+    @SuppressWarnings("unchecked")                       
+    private void initComponents() {
+
+        jSeparator1 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPaneTREE = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        jButtonADDGR = new javax.swing.JButton();
+        jButtonSAVE = new javax.swing.JButton();
+        jScrollPaneRIGHT = new javax.swing.JScrollPane();
+        jPanel3 = new javax.swing.JPanel();
+        jButtonEDIT = new javax.swing.JButton();
+        jButtonDEL = new javax.swing.JButton();
+        jButtonADDGO = new javax.swing.JButton();
+        jLabelQUAN = new javax.swing.JLabel();
+        jButtonMIN = new javax.swing.JButton();
+        jButtonPL = new javax.swing.JButton();
+        jLabelPRICE = new javax.swing.JLabel();
+        jLabelGROUP = new javax.swing.JLabel();
+        jLabelNAME = new javax.swing.JLabel();
+        jLabelMADE = new javax.swing.JLabel();
+        jLabelINFO = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Групи товарів", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+
+        jScrollPaneTREE.setViewportView(jTree1);
+
+        jButtonADDGR.setText("Додати групу");
+
+        jButtonSAVE.setText("Зберегти");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPaneTREE)
+                    .addComponent(jButtonADDGR, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                    .addComponent(jButtonSAVE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPaneTREE, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonADDGR)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonSAVE))
+        );
+
+        jScrollPaneRIGHT.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Товар", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+        jScrollPaneRIGHT.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        jButtonEDIT.setText("Редагувати");
+
+        jButtonDEL.setText("Видалити");
+
+        jButtonADDGO.setText("Додати новий товар");
+
+        jLabelQUAN.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelQUAN.setText("Кількість");
+
+        jButtonMIN.setText("-");
+
+        jButtonPL.setText("+");
+
+        jLabelPRICE.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelPRICE.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelPRICE.setText("Ціна:");
+
+        jLabelGROUP.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelGROUP.setText("Група товарів:");
+
+        jLabelNAME.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelNAME.setText("Назва товару:");
+
+        jLabelMADE.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelMADE.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelMADE.setText("Виробник:");
+
+        jLabelINFO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelINFO.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelINFO.setText("Опис:");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 82, Short.MAX_VALUE)
+                .addComponent(jButtonMIN, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelQUAN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonPL)
+                .addGap(131, 131, 131))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelGROUP)
+                    .addComponent(jLabelNAME)
+                    .addComponent(jLabelMADE, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelINFO, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabelPRICE, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonDEL, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEDIT, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonADDGO, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelGROUP)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelNAME)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelMADE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelINFO)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelPRICE)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelQUAN)
+                    .addComponent(jButtonPL)
+                    .addComponent(jButtonMIN))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonEDIT)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonDEL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonADDGO)
+                .addContainerGap(92, Short.MAX_VALUE))
+        );
+
+        jScrollPaneRIGHT.setViewportView(jPanel3);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPaneRIGHT, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPaneRIGHT)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        pack();
+    }                     
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Proga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Proga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Proga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Proga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Proga().setVisible(true);
+            }
+        });
+    }
+                   
+    private javax.swing.JButton jButtonADDGR;
+    private javax.swing.JButton jButtonSAVE;
+    private javax.swing.JButton jButtonEDIT;
+    private javax.swing.JButton jButtonDEL;
+    private javax.swing.JButton jButtonADDGO;
+    private javax.swing.JButton jButtonMIN;
+    private javax.swing.JButton jButtonPL;
+    private javax.swing.JLabel jLabelGROUP;
+    private javax.swing.JLabel jLabelNAME;
+    private javax.swing.JLabel jLabelQUAN;
+    private javax.swing.JLabel jLabelPRICE;
+    private javax.swing.JLabel jLabelMADE;
+    private javax.swing.JLabel jLabelINFO;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPaneTREE;
+    private javax.swing.JScrollPane jScrollPaneRIGHT;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTree jTree1;                
+}
